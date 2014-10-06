@@ -7,23 +7,22 @@
 # Use it as you wish :)                #
 ########################################
 
-import workstation
+import server
 
-class Lab(object):
+class Datacenter(object):
 
     def __init__(self):
-        self.name = "B1.23 Lab"
-        self.workstations = []
+        self.name = "OS3 Server Room"
+        self.servers = []
         self.connections = []
 
+    def add_server(self,name,connection,owner):
 
-    def add_workstation(self,name,connection,owner):
-
-        temp = workstation.Workstation()
+        temp = server.Server()
         temp.name_it(name)
         temp.connect(connection)
         temp.assign(owner)
-        self.workstations.append(temp)
+        self.servers.append(temp)
 
     def connect(self, connection):
         self.connections.append(connection)
@@ -31,7 +30,7 @@ class Lab(object):
     def printinfo(self):
         print "*****"
         print self.name
-        for i in self.workstations:
+        for i in self.servers:
             print i.name + " " + i.owner + " " + i.connection
         print "connected to:"
         for i in self.connections:
@@ -42,5 +41,5 @@ class Lab(object):
     def printall(self):
         self.printinfo()
         print "\t"
-        for i in self.workstations:
-            i.printall()
+        for i in self.servers:
+            i.printinfo()

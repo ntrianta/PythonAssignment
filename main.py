@@ -19,6 +19,17 @@ OS3_lab.add_workstation("Desktop 18", "network", "Alex Stavroulakis")
 OS3_lab.add_workstation("Desktop 19", "network", "Diana Rusu")
 OS3_lab.add_workstation("Desktop 8", "network", "Xavier Torrent Gorjon")
 OS3_lab.printall()
+OS3_servers.add_server("oxford","network","Nick Triantafyllidis")
+OS3_servers.add_server("manchester","network","Alex Stavroulakis")
+OS3_servers.add_server("liverpool","network","Diana Rusu")
+OS3_servers.add_server("notingham","network","Xavier Torrent Gorjon")
+OS3_servers.printall()
+OS3_lab.connect("Server room")
+OS3_servers.connect("SNE Lab")
+OS3_lab.connect("SARA")
+OS3_servers.connect("SARA")
+OS3_lab.printinfo()
+OS3_servers.printinfo()
 
 
 

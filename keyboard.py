@@ -7,7 +7,6 @@
 # Use it as you wish :)                 #
 #########################################
 
-
 class DellKeyboard(object):
     def __init__(self):
         self.make = "Dell"

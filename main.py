@@ -57,6 +57,7 @@ class Workstation(object):
         self.make = "Dell"
         self.model = "Optiplex 7010"
         self.color = "Black"
+        self.os = "Ubuntu 14.10"
         self.connection = "None"
         self.owner="Nobody"
         self.monitor1 = DellMonitor()
@@ -73,6 +74,7 @@ class Workstation(object):
         print self.model
         print self.color
         print self.connection
+        print self.os
         print self.owner
 
     def printall(self):
@@ -83,9 +85,6 @@ class Workstation(object):
         self.mouse.printinfo()
 
 
-workstation1 = Workstation()
-workstation1.printinfo()
-print "========"
-workstation1.printall()
+
 
 

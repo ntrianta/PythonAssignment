@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
-########################################
-# This project is a lab assignment     #
-# for the Essential Skills Module.     #
-# University of Amsterdam              #
-# MSc in System and Network Engineering#
-# Nick Trintafyllidis.                 #
-# Use it as you wish :)                #
-########################################
+#########################################
+# This project is a lab assignment      #
+# for the Essential Skills Module.      #
+# University of Amsterdam               #
+# MSc in System and Network Engineering #
+# Nick Trintafyllidis.                  #
+# Use it as you wish :)                 #
+#########################################
 
 import lab
 import datacenter

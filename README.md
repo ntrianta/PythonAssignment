@@ -1,4 +1,4 @@
-PythonAssignment
+Python Assignment Lab 10
 ================
 
 Assignment for Lab 10, Essential Skills

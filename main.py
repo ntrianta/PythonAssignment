@@ -8,10 +8,13 @@ class DellKeyboard(object):
         self.connection="none"
 
     def printinfo(self):
-        print self.make
-        print self.model
-        print self.color
-        print self.connection
+        print "*****"
+        print "Make:" + self.make
+        print "Model:" + self.model
+        print "Color:" + self.color
+        print "Connection:" + self.connection
+        print "*****"
+
 
     def connect(self, connection):
         self.connection = connection
@@ -24,10 +27,13 @@ class DellMouse(object):
         self.connection = "none"
 
     def printinfo(self):
-        print self.make
-        print self.model
-        print self.color
-        print self.connection
+        print "*****"
+        print "Make:" + self.make
+        print "Model:" + self.model
+        print "Color:" + self.color
+        print "Connection:" + self.connection
+        print "*****"
+
 
     def connect(self, connection):
        self.connection = connection
@@ -42,11 +48,11 @@ class DellMonitor(object):
         self.connection="none"
 
     def printinfo(self):
-        print self.make
-        print self.model
-        print self.size
-        print self.color
-        print self.connection
+        print "Make:" + self.make
+        print "Model:" + self.model
+        print "Size:" + self.size
+        print "Color:" + self.color
+        print "Connection:" + self.connection
 
     def connect(self, connection):
         self.connection = connection
@@ -54,6 +60,7 @@ class DellMonitor(object):
 
 class Workstation(object):
     def __init__(self):
+        self.name = "None"
         self.make = "Dell"
         self.model = "Optiplex 7010"
         self.color = "Black"
@@ -70,19 +77,68 @@ class Workstation(object):
         self.mouse.connect("USB")
 
     def printinfo(self):
-        print self.make
-        print self.model
-        print self.color
-        print self.connection
-        print self.os
-        print self.owner
+        print "Name:" + self.name
+        print "Make:" + self.make
+        print "Model:" + self.model
+        print "Color:" + self.color
+        print "Connection:" + self.connection
+        print "Operating System:" + self.os
+        print "Owner:" + self.owner
 
     def printall(self):
         self.printinfo()
+        print "\t"
         self.monitor1.printinfo()
         self.monitor2.printinfo()
         self.keyboard.printinfo()
         self.mouse.printinfo()
+
+    def connect(self, connection):
+        self.connection = connection
+
+    def assign(self, owner):
+        self.owner = owner
+
+    def name_it(self, name):
+        self.name = name
+
+class Lab(object):
+
+    def __init__(self):
+        self.name = "B1.23 Lab"
+        self.workstations = []
+
+    def add_workstation(self,name,connection,owner):
+
+        temp = Workstation()
+        temp.name_it(name)
+        temp.connect(connection)
+        temp.assign(owner)
+        self.workstations.append(temp)
+
+    def printinfo(self):
+        print self.name
+        for i in self.workstations:
+            print i.name + " " + i.owner + " " + i.connection
+
+    def printall(self):
+        self.printinfo()
+        print "\t"
+        for i in self.workstations:
+            i.printall()
+
+
+OS3_lab = Lab()
+OS3_lab.add_workstation("Desktop 17", "network", "Nick Triantafyllidis")
+OS3_lab.add_workstation("Desktop 18", "network", "Alex Stavroulakis")
+OS3_lab.add_workstation("Desktop 19", "network", "Diana Rusu")
+OS3_lab.add_workstation("Desktop 8", "network", "Xavier Torrent Gorjon")
+OS3_lab.printall()
+
+
+
+
+
 
 
 

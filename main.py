@@ -48,11 +48,14 @@ class DellMonitor(object):
         self.connection="none"
 
     def printinfo(self):
+        print "*****"
         print "Make:" + self.make
         print "Model:" + self.model
         print "Size:" + self.size
         print "Color:" + self.color
         print "Connection:" + self.connection
+        print "*****"
+
 
     def connect(self, connection):
         self.connection = connection
@@ -77,6 +80,7 @@ class Workstation(object):
         self.mouse.connect("USB")
 
     def printinfo(self):
+        print "*****"
         print "Name:" + self.name
         print "Make:" + self.make
         print "Model:" + self.model
@@ -84,13 +88,17 @@ class Workstation(object):
         print "Connection:" + self.connection
         print "Operating System:" + self.os
         print "Owner:" + self.owner
+        print "*****"
 
     def printall(self):
         self.printinfo()
-        print "\t"
+        print "Monitor 1:"
         self.monitor1.printinfo()
+        print "Monitor 2:"
         self.monitor2.printinfo()
+        print "Keyboard:"
         self.keyboard.printinfo()
+        print "Mouse:"
         self.mouse.printinfo()
 
     def connect(self, connection):

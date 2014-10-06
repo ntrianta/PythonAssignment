@@ -39,7 +39,7 @@ class Workstation(object):
         self.monitor2.printinfo()
         print "Keyboard:"
         self.keyboard.printinfo()
-        print ":"
+        print "Mouse:"
         self.mouse.printinfo()
 
     def connect(self, connection):

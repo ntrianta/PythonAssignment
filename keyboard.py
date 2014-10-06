@@ -1,3 +1,13 @@
+########################################
+# This project is a lab assignment     #
+# for the Essential Skills Module.     #
+# University of Amsterdam              #
+# MSc in System and Network Engineering#
+# Nick Trintafyllidis.                 #
+# Use it as you wish :)                #
+########################################
+
+
 class DellKeyboard(object):
     def __init__(self):
         self.make = "Dell"

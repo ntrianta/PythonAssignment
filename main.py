@@ -12,6 +12,8 @@
 import lab
 import datacenter
 
+# This file adds some machines to each room and then connects the rooms together.
+
 OS3_lab = lab.Lab()
 OS3_servers = datacenter.Datacenter()
 OS3_lab.add_workstation("Desktop 17", "network", "Nick Triantafyllidis")

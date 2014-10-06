@@ -31,9 +31,10 @@ class Lab(object):
     def printinfo(self):
         print "*****"
         print self.name
+        print "Machines:"
         for i in self.workstations:
             print i.name + " " + i.owner + " " + i.connection
-        print "connected to:"
+        print "Connected to:"
         for i in self.connections:
             print i
         print "*****"
